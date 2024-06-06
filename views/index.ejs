@@ -5,7 +5,15 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <form action="/" method="post">
+    <label>タスクの追加</label>
+    <input required type="text" name="add" placeholder="何をする?"/>
+    <input type="submit" value="追加"/>
+  </form>
+  <ul>
+    <% for(let todo of todos){ %>
+      <li><span><%= todo %></span></li>
+    <% } %>
+  </ul>
   </body>
 </html>
